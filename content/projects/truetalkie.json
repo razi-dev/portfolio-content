@@ -7,7 +7,7 @@
   "status": "↳ Live System / Open Source",
   "year": "2024 - Present",
   "role": "Lead Mobile & Systems Architect",
-  "description": "Engineered an ultra-low latency push-to-talk voice application designed for tactical, remote, and mission-critical scenarios where cellular connectivity is intermittent or completely unavailable. Built with a dual-transport physical layer combining cloud-coordinated WebRTC signaling with an ad-hoc offline UDP multicast engine.",
+  "description": "Engineered an ultra-low latency tap-to-talk voice application designed for tactical, remote, and mission-critical scenarios where cellular connectivity is intermittent or completely unavailable. Built with a dual-transport physical layer combining cloud-coordinated WebRTC signaling with an ad-hoc offline UDP multicast engine.",
   "detailedOverview": "TrueTalkie addresses one of the fundamental vulnerabilities of modern voice communications: the total reliance on centralized cellular base stations and public internet infrastructure. In disaster-recovery scenarios, remote fieldwork, and congested environments, conventional VoIP apps fail immediately upon link degradation. TrueTalkie introduces a resilient hybrid communication topology. When internet access is present, audio streams navigate low-latency WebRTC peer connections coordinated via Supabase Realtime signaling. The instant internet connectivity drops, the system seamlessly transitions into a zero-configuration ad-hoc local mesh, utilizing raw UDP multicast packets broadcasted directly over local Wi-Fi or mobile hotspot subnets.",
   "technologies": [
     "React Native (Expo)",
