@@ -42,7 +42,7 @@
     }
   ],
   "metrics": "Sub-400ms token streaming latency via Groq LPU; 100% offline-ready journal logging with automatic cloud sync.",
-  "githubUrl": "https://github.com/razi-dev/ai-companion-app",
+  "githubUrl": "https://github.com/razi-dev/Personal-AI-Companion-App",
   "hoverImage": "/assets/images/projects/personal-ai-companion/hover-banner.jpg",
   "gallery": [
     {

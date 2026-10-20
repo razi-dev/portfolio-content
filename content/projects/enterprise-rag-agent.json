@@ -43,7 +43,7 @@
     }
   ],
   "metrics": "Sub-60ms vector retrieval; zero out-of-context hallucinations via strict citation attribution.",
-  "githubUrl": "https://github.com/razi-dev/enterprise-ai-platform",
+  "githubUrl": "https://github.com/razi-dev/enterprise-ai-agent",
   "hoverImage": "/assets/images/projects/enterprise-rag-agent/hover-banner.jpg",
   "gallery": [
     {
