@@ -1,0 +1,94 @@
+[
+  {
+    "id": "mca-graduation",
+    "slug": "mca-graduation-fisat",
+    "day": "14",
+    "monthYear": "JUL '26",
+    "date": "July 14, 2026",
+    "isoDate": "2026-07-14",
+    "tag": "ACADEMIC & DEGREE",
+    "watermarkLetter": "M",
+    "title": "Master of Computer Applications (MCA) Graduation",
+    "shortDescription": "Graduated with Master of Computer Applications (MCA) from Federal Institute of Science and Technology (FISAT), Kerala, affiliated with KTU.",
+    "fullDescription": "Successfully completed Master of Computer Applications (MCA) from Federal Institute of Science and Technology (FISAT), Kerala, affiliated with APJ Abdul Kalam Technological University (KTU). This rigorous postgraduate journey sharpened core proficiencies in advanced software engineering, distributed systems, mobile application frameworks, and applied computer science.",
+    "organizer": "Federal Institute of Science and Technology (FISAT) · APJ Abdul Kalam Technological University (KTU)",
+    "location": "Ernakulam, Kerala, India",
+    "image": "/assets/images/events/event-mca-graduation.jpg",
+    "linkedinUrl": "https://www.linkedin.com/posts/razi-ahmed-m_mca-graduation-fisat-ugcPost-7481739543872765953-yeN9/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADahN8MBtNSg8jlnfXdSfLlBOaxNMqeYVjk",
+    "activities": [
+      "Advanced Software Engineering & Distributed System Architecture",
+      "Full-Stack Web & Cross-Platform Mobile Engineering (React Native, Node.js)",
+      "Applied Machine Intelligence, Data Modeling & Algorithmic Problem Solving",
+      "Collaborative Team Leadership & Production-grade Capstone Projects"
+    ]
+  },
+  {
+    "id": "ai-prompt-engineering",
+    "slug": "ai-prompt-engineering-vibe-coding-workshop",
+    "day": "22",
+    "monthYear": "MAY '26",
+    "date": "May 22, 2026",
+    "isoDate": "2026-05-22",
+    "tag": "WORKSHOP & AI",
+    "watermarkLetter": "A",
+    "title": "AI Prompt Engineering & Vibe Coding Workshop",
+    "shortDescription": "Intensive hands-on workshop at Future Path Infocampus mastering AI prompting frameworks, agentic workflows, and modern vibe coding paradigms.",
+    "fullDescription": "Completed an intensive One-Day Offline AI Prompt Engineering & Vibe Coding Workshop with practical real-world project builds at Future Path Infocampus. Gained comprehensive hands-on exposure to systematic prompt structuring, context steering, agentic code synthesis, and applied AI tooling for rapid software development.",
+    "organizer": "Future Path Infocampus",
+    "location": "Kochi, Kerala, India",
+    "image": "/assets/images/events/event-ai-vibe-coding.jpg",
+    "linkedinUrl": "https://www.linkedin.com/posts/razi-ahmed-m_artificialintelligence-promptengineering-share-7481753197007683584-IEXy/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADahN8MBtNSg8jlnfXdSfLlBOaxNMqeYVjk",
+    "activities": [
+      "Structured AI Prompt Engineering & Few-Shot Context Steering",
+      "Vibe Coding Paradigms: Building Working Products at Lightning Speed",
+      "Hands-on AI Tooling Integration with Practical Software Pipelines",
+      "Real-World Problem Solving with LLM Agentic Workflows"
+    ]
+  },
+  {
+    "id": "mpower-communication",
+    "slug": "mpower-training-workshop-power-communication",
+    "day": "04",
+    "monthYear": "SEP '25",
+    "date": "September 04, 2025",
+    "isoDate": "2025-09-04",
+    "tag": "LEADERSHIP & SKILLS",
+    "watermarkLetter": "P",
+    "title": "mPower Workshop on Power Communication",
+    "shortDescription": "A 4-day intensive executive training program conducted by Vertical Eye focused on high-impact public speaking and persuasive leadership communication.",
+    "fullDescription": "Successfully completed the mPower Training Workshop on Power Communication — an intensive 4-day executive program designed and delivered by Vertical Eye. Focused on mastering impactful vocal delivery, persuasive technical storytelling, leadership presence, and clear interpersonal dynamics in high-stakes professional environments.",
+    "organizer": "Vertical Eye",
+    "location": "Kochi, Kerala, India",
+    "image": "/assets/images/events/event-mpower-group.jpg",
+    "linkedinUrl": "https://www.linkedin.com/posts/razi-ahmed-m_thrilled-to-share-that-i-have-successfully-ugcPost-7369420003881701382-IHTt/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADahN8MBtNSg8jlnfXdSfLlBOaxNMqeYVjk",
+    "activities": [
+      "Executive & Technical Public Speaking Mastery",
+      "High-Impact Rhetoric & Persuasive Storytelling",
+      "Interpersonal Dynamics & Collaborative Influence",
+      "Executive Presence & Confident Multi-Stakeholder Dialogue"
+    ]
+  },
+  {
+    "id": "mern-stack-bootcamp",
+    "slug": "8-day-mern-stack-bootcamp",
+    "day": "28",
+    "monthYear": "JUL '25",
+    "date": "July 28, 2025",
+    "isoDate": "2025-07-28",
+    "tag": "BOOTCAMP & FULL-STACK",
+    "watermarkLetter": "M",
+    "title": "8-Day Intensive MERN Stack Bootcamp",
+    "shortDescription": "Comprehensive 8-day full-stack bootcamp hosted by Department of Computer Applications, FISAT and led by Anish S Nair (Link Ur Codes).",
+    "fullDescription": "Successfully completed an intensive 8-Day MERN Stack Bootcamp led by Anish S Nair from Link Ur Codes, hosted by the Department of Computer Applications at FISAT. Explored the complete JavaScript ecosystem from building scalable RESTful APIs with Node.js and Express to architecting responsive, component-driven client applications with React and MongoDB.",
+    "organizer": "Link Ur Codes & Department of Computer Applications, FISAT (Led by Anish S Nair)",
+    "location": "Ernakulam, Kerala, India",
+    "image": "/assets/images/events/event-mern-bootcamp.jpg",
+    "linkedinUrl": "https://www.linkedin.com/posts/razi-ahmed-m_mernstack-mernstack-webdevelopment-share-7355563829591756800-BQHf/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADahN8MBtNSg8jlnfXdSfLlBOaxNMqeYVjk",
+    "activities": [
+      "MongoDB Database Schema Design & Complex Aggregations",
+      "RESTful API Development & Middleware Design with Node.js & Express",
+      "Modern React State Workflows, Custom Hooks & Component Architecture",
+      "End-to-End Full Stack Integration & Production Best Practices"
+    ]
+  }
+]

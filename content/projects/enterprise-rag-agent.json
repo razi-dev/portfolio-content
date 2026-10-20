@@ -1,0 +1,56 @@
+{
+  "id": "enterprise-rag-agent",
+  "slug": "enterprise-rag-agent",
+  "systemIndex": "SYSTEM 02",
+  "title": "Enterprise AI Agent Platform",
+  "subtitle": "Grounded Q&A system using LangGraph cyclical multi-step orchestration, ChromaDB vector indexing, and FastAPI asynchronous streaming.",
+  "status": "↳ Enterprise Architecture",
+  "year": "2024",
+  "role": "AI Systems & Backend Engineer",
+  "description": "Built an AI-powered question-answering system using Retrieval-Augmented Generation (RAG) and LangGraph to orchestrate multi-step document retrieval, semantic query routing, and LLM-based response synthesis with verified citation grounding.",
+  "detailedOverview": "Enterprise knowledge bases often suffer from document fragmentation, hallucinated LLM responses, and high retrieval latencies across large corpora. The Enterprise AI Agent Platform was architected to eliminate ungrounded statements through an explicit cyclical state machine built with LangGraph. Instead of naive single-shot vector lookups, the platform breaks incoming complex user inquiries into semantic sub-questions, executes parallel vector embedding lookups across ChromaDB collections, grades retrieved context for relevance, and only synthesizes final answers when confidence thresholds are rigorously satisfied.",
+  "technologies": [
+    "Python",
+    "FastAPI",
+    "LangGraph",
+    "RAG Architecture",
+    "ChromaDB",
+    "OpenAI API",
+    "Docker"
+  ],
+  "highlights": [
+    "Built an AI-powered question-answering system using Retrieval-Augmented Generation (RAG) and LangGraph to orchestrate document retrieval and LLM-based response generation.",
+    "Implemented semantic document retrieval using vector embeddings and ChromaDB to retrieve relevant context for user queries.",
+    "Developed a Python and FastAPI backend exposing AI workflows through secure REST APIs and real-time streaming endpoints.",
+    "Integrated LLM APIs to generate context-aware responses strictly grounded in retrieved document content with citation footnotes."
+  ],
+  "keyArchitecture": [
+    {
+      "title": "Cyclical Agentic State Machine with LangGraph",
+      "description": "Constructed a multi-step graph featuring query rewriting, document grading, fallback web search retrieval, and answer hallucination checks before streaming the final response back to the client."
+    },
+    {
+      "title": "ChromaDB High-Density Vector Search",
+      "description": "Chunked heterogeneous enterprise PDFs, Markdown files, and internal policies using recursive character splitting with semantic overlap, generating normalized vector embeddings with sub-60ms retrieval benchmarks."
+    },
+    {
+      "title": "Asynchronous High-Throughput FastAPI Engine",
+      "description": "Architected ASGI endpoints utilizing Server-Sent Events (SSE) to deliver real-time token streaming, comprehensive token usage monitoring, and sub-100ms response start times."
+    },
+    {
+      "title": "Factual Grounding & Footnote Attribution",
+      "description": "Enforced strict system prompt guardrails that compel the synthesis engine to cite exact document chunks and page numbers, returning structured confidence intervals for every claim."
+    }
+  ],
+  "metrics": "Sub-60ms vector retrieval; zero out-of-context hallucinations via strict citation attribution.",
+  "githubUrl": "https://github.com/razi-dev/enterprise-ai-platform",
+  "hoverImage": "/assets/images/projects/enterprise-rag-agent/hover-banner.jpg",
+  "gallery": [
+    {
+      "url": "/assets/images/projects/enterprise-rag-agent/hover-banner.jpg",
+      "caption": "LangGraph Multi-Step Agent Workflow Graph & ChromaDB Vector Space Visualization"
+    }
+  ],
+  "iconName": "Bot",
+  "featured": true
+}

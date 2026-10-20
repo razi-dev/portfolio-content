@@ -1,0 +1,76 @@
+[
+  {
+    "category": "Mobile & Frontend",
+    "description": "Architecting responsive, high-performance mobile clients and web interfaces with native bridge capabilities.",
+    "skills": [
+      "React Native",
+      "Expo",
+      "React.js",
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS"
+    ]
+  },
+  {
+    "category": "AI & Machine Learning",
+    "description": "Designing agentic pipelines, document embedding strategies, and context-retrieval systems.",
+    "skills": [
+      "LLM APIs",
+      "RAG",
+      "AI Agents",
+      "LangGraph",
+      "LangChain",
+      "Prompt Engineering",
+      "Embeddings",
+      "Vector Databases"
+    ]
+  },
+  {
+    "category": "Real-Time Communication",
+    "description": "Engineering low-latency audio transmission, peer discovery, and local-network sockets.",
+    "skills": [
+      "WebRTC",
+      "Kotlin",
+      "UDP Sockets",
+      "Supabase Realtime",
+      "Android Foreground Services"
+    ]
+  },
+  {
+    "category": "Backend & Web",
+    "description": "Building production REST APIs, microservices, and asynchronous event pipelines.",
+    "skills": [
+      "Node.js",
+      "Express.js",
+      "NestJS",
+      "FastAPI",
+      "REST APIs",
+      "Python"
+    ]
+  },
+  {
+    "category": "Databases",
+    "description": "Relational modeling, document persistence, and vector similarity indexing.",
+    "skills": [
+      "SQL",
+      "MySQL",
+      "MongoDB",
+      "ChromaDB",
+      "pgvector"
+    ]
+  },
+  {
+    "category": "Tools & Platforms",
+    "description": "Containerization, cloud workflows, and cross-team deployment pipelines.",
+    "skills": [
+      "Git",
+      "GitHub",
+      "Docker",
+      "AWS",
+      "Postman",
+      "AsyncStorage"
+    ]
+  }
+]

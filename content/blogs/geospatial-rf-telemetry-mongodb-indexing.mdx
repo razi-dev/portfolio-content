@@ -1,0 +1,74 @@
+---
+id: "geospatial-rf-telemetry"
+title: "Geospatial RF Telemetry at Scale: MongoDB 2dsphere Indexing & Signal Heatmaps"
+slug: "geospatial-rf-telemetry-mongodb-indexing"
+date: "May 2025"
+readTime: "6 min read"
+summary: "How NetVision visualizes 4G/5G cellular coverage using geospatial MongoDB queries, raw RF telemetry extraction from mobile telephony hardware, and IDW contour interpolation."
+tags: ["MongoDB","Geospatial","Node.js","React Native","RF Telemetry"]
+headings: [{"id":"the-cellular-black-box","text":"The Cellular Black Box Problem","level":2},{"id":"extracting-hardware-rf-telemetry","text":"Extracting Hardware RF Telemetry","level":2},{"id":"mongodb-2dsphere-indexing","text":"MongoDB 2dsphere Geospatial Indexing","level":2},{"id":"idw-interpolation-heatmaps","text":"Inverse Distance Weighting (IDW) Heatmaps","level":3},{"id":"multi-carrier-normalization","text":"Multi-Carrier Telemetry Normalization","level":2},{"id":"key-takeaways","text":"Production Benchmarks & Takeaways","level":2}]
+sections: [{"id":"the-cellular-black-box","title":"The Cellular Black Box Problem","level":2,"content":"Cellular signal strength indicators (the 1-4 bars displayed on phone status bars) are notoriously deceptive. They reflect proprietary OEM filtering curves rather than actual radio frequency metrics. When diagnosing carrier drop-offs or planning remote IoT deployments, engineers require raw physical parameters: RSRP (Reference Signal Received Power), RSRQ (Reference Signal Received Quality), and SINR (Signal-to-Interference-plus-Noise Ratio). NetVision was designed to harvest these metrics directly from modem basebands and plot them against geo-located cellular tower masts.","keyTakeaways":["Status bar signal bars hide interference and signal degradation.","RSRP and SINR provide true insight into cellular link health.","Correlating radio telemetry with geospatial tower databases reveals dead zones."]},{"id":"extracting-hardware-rf-telemetry","title":"Extracting Hardware RF Telemetry","level":2,"content":"Using Android's `TelephonyManager.getAllCellInfo()`, we query active and neighbor cell towers. For LTE connections, we capture CellIdentityLte (MCC, MNC, CI, TAC, PCI) and CellSignalStrengthLte. To conserve battery during active surveying, polling is throttled when the device accelerometer detects the user is stationary.","codeSnippet":{"language":"typescript","filename":"telemetryService.ts","code":"export interface CellTelemetryPayload {\n  carrier: string;\n  networkType: 'LTE' | 'NR_5G' | 'WCDMA';\n  pci: number; // Physical Cell ID\n  tac: number; // Tracking Area Code\n  rsrp: number; // dBm (-140 to -44)\n  sinr: number; // dB (-20 to +30)\n  coordinates: [number, number]; // [lng, lat]\n}"}},{"id":"mongodb-2dsphere-indexing","title":"MongoDB 2dsphere Geospatial Indexing","level":2,"content":"With over 1.2 million base station antennas across regional databases, querying towers within a user's viewport required sub-millisecond indexing. We defined a spherical 2dsphere index on GeoJSON Point objects, executing `$nearSphere` queries bounded by max distance thresholds.","codeSnippet":{"language":"javascript","filename":"towerController.js","code":"const findNearbyTowers = async (lng, lat, radiusMeters = 5000) => {\n  return await Tower.find({\n    location: {\n      $nearSphere: {\n        $geometry: {\n          type: \"Point\",\n          coordinates: [lng, lat]\n        },\n        $maxDistance: radiusMeters\n      }\n    }\n  }).select(\"operator radio cellId pci location azmuth\");\n};"}},{"id":"idw-interpolation-heatmaps","title":"Inverse Distance Weighting (IDW) Heatmaps","level":3,"content":"Rather than displaying sparse point pins, NetVision calculates an interpolated coverage gradient. Using Inverse Distance Weighting (IDW), each grid pixel on the map estimates signal power by factoring known nearby telemetry measurements inversely proportional to distance squared."},{"id":"multi-carrier-normalization","title":"Multi-Carrier Telemetry Normalization","level":2,"content":"Different cellular bands (e.g. Band 3 at 1800MHz vs Band 28 at 700MHz) penetrate foliage and urban structures differently. NetVision normalizes path-loss exponents based on carrier frequency, enabling fair cross-carrier reliability scoring for travelers and field operations."},{"id":"key-takeaways","title":"Production Benchmarks & Takeaways","level":2,"content":"By coupling low-level telephony hooks with geospatial spherical indexing and mathematical field interpolation, mobile clients can transform unorganized signal noise into actionable geographic intelligence."}]
+---
+
+# Geospatial RF Telemetry at Scale: MongoDB 2dsphere Indexing & Signal Heatmaps
+
+How NetVision visualizes 4G/5G cellular coverage using geospatial MongoDB queries, raw RF telemetry extraction from mobile telephony hardware, and IDW contour interpolation.
+
+## The Cellular Black Box Problem
+
+Cellular signal strength indicators (the 1-4 bars displayed on phone status bars) are notoriously deceptive. They reflect proprietary OEM filtering curves rather than actual radio frequency metrics. When diagnosing carrier drop-offs or planning remote IoT deployments, engineers require raw physical parameters: RSRP (Reference Signal Received Power), RSRQ (Reference Signal Received Quality), and SINR (Signal-to-Interference-plus-Noise Ratio). NetVision was designed to harvest these metrics directly from modem basebands and plot them against geo-located cellular tower masts.
+
+> **Architectural Takeaways**
+>
+> - Status bar signal bars hide interference and signal degradation.
+> - RSRP and SINR provide true insight into cellular link health.
+> - Correlating radio telemetry with geospatial tower databases reveals dead zones.
+
+## Extracting Hardware RF Telemetry
+
+Using Android's `TelephonyManager.getAllCellInfo()`, we query active and neighbor cell towers. For LTE connections, we capture CellIdentityLte (MCC, MNC, CI, TAC, PCI) and CellSignalStrengthLte. To conserve battery during active surveying, polling is throttled when the device accelerometer detects the user is stationary.
+
+```typescript filename="telemetryService.ts"
+export interface CellTelemetryPayload {
+  carrier: string;
+  networkType: 'LTE' | 'NR_5G' | 'WCDMA';
+  pci: number; // Physical Cell ID
+  tac: number; // Tracking Area Code
+  rsrp: number; // dBm (-140 to -44)
+  sinr: number; // dB (-20 to +30)
+  coordinates: [number, number]; // [lng, lat]
+}
+```
+
+## MongoDB 2dsphere Geospatial Indexing
+
+With over 1.2 million base station antennas across regional databases, querying towers within a user's viewport required sub-millisecond indexing. We defined a spherical 2dsphere index on GeoJSON Point objects, executing `$nearSphere` queries bounded by max distance thresholds.
+
+```javascript filename="towerController.js"
+const findNearbyTowers = async (lng, lat, radiusMeters = 5000) => {
+  return await Tower.find({
+    location: {
+      $nearSphere: {
+        $geometry: {
+          type: "Point",
+          coordinates: [lng, lat]
+        },
+        $maxDistance: radiusMeters
+      }
+    }
+  }).select("operator radio cellId pci location azmuth");
+};
+```
+
+## Inverse Distance Weighting (IDW) Heatmaps
+
+Rather than displaying sparse point pins, NetVision calculates an interpolated coverage gradient. Using Inverse Distance Weighting (IDW), each grid pixel on the map estimates signal power by factoring known nearby telemetry measurements inversely proportional to distance squared.
+
+## Multi-Carrier Telemetry Normalization
+
+Different cellular bands (e.g. Band 3 at 1800MHz vs Band 28 at 700MHz) penetrate foliage and urban structures differently. NetVision normalizes path-loss exponents based on carrier frequency, enabling fair cross-carrier reliability scoring for travelers and field operations.
+
+## Production Benchmarks & Takeaways
+
+By coupling low-level telephony hooks with geospatial spherical indexing and mathematical field interpolation, mobile clients can transform unorganized signal noise into actionable geographic intelligence.
+

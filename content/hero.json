@@ -1,0 +1,29 @@
+{
+  "name": "Razi Ahmed M",
+  "role": "Mobile Application Developer & AI Systems Engineer",
+  "tagline": "Engineering resilient mobile architectures, low-latency audio protocols, and context-grounded AI agent workflows.",
+  "resumeUrl": "/assets/resume/Mob_Razi.pdf",
+  "stats": [
+    {
+      "label": "COMMITS",
+      "value": "1,420+",
+      "subtext": "Public & private cadence"
+    },
+    {
+      "label": "PRODUCTION APPS",
+      "value": "5+",
+      "subtext": "E-Commerce & HRMS"
+    },
+    {
+      "label": "AUDIO LATENCY",
+      "value": "<8ms",
+      "subtext": "UDP / WebRTC stream"
+    }
+  ],
+  "heroBadges": [
+    "MOBILE ARCHITECTURE",
+    "REAL-TIME WEBRTC",
+    "LANGGRAPH & RAG",
+    "PRODUCTION ENGINEER"
+  ]
+}

@@ -1,0 +1,118 @@
+[
+  {
+    "id": "ibm-devops",
+    "number": "01 /",
+    "badge": "VERIFIED CREDENTIAL",
+    "direction": "DEVOPS & PIPELINES",
+    "title": "DevOps Fundamentals — IBM SkillsBuild",
+    "quote": "“Continuous delivery, automated testing, and zero-downtime infrastructure.”",
+    "description": "Mastered the foundational paradigms of agile continuous integration, automated deployment workflows, containerized environments, and cloud infrastructure monitoring.",
+    "skills": [
+      "Docker",
+      "CI/CD Pipelines",
+      "Automation",
+      "GitOps",
+      "Monitoring"
+    ],
+    "verificationUrl": "https://courses.etrain.skillsnetwork.site/certificates/35e7b92d928d4967a12667f4d20214ad",
+    "terminal": {
+      "handle": "ibm.skillsbuild.devops",
+      "issuer": "IBM SkillsBuild",
+      "date": "March 2026",
+      "credentialId": "IBM-SB-DEV-2026-9481",
+      "chip": "Verified DevOps Engineer"
+    }
+  },
+  {
+    "id": "aws-cloud",
+    "number": "02 /",
+    "badge": "CLOUD ARCHITECTURE",
+    "direction": "INFRASTRUCTURE STANDARDS",
+    "title": "AWS Academy Cloud Foundations",
+    "quote": "“Architecting for high availability, fault tolerance, and elastic scalability.”",
+    "description": "Comprehensive certification across Amazon Web Services core primitives: VPC networking, EC2 elastic compute, S3 object storage, IAM role-based access control, and distributed cloud security.",
+    "skills": [
+      "AWS VPC",
+      "EC2 Compute",
+      "S3 Storage",
+      "IAM Policies",
+      "Cloud Security"
+    ],
+    "verificationUrl": "https://www.credly.com/badges/5c884a3c-44d5-4258-8f56-d56117ecd188/print",
+    "terminal": {
+      "handle": "aws.academy.cloud.runtime",
+      "issuer": "Amazon Web Services (AWS)",
+      "date": "August 2025",
+      "credentialId": "AWS-ACAD-FND-8834",
+      "chip": "AWS Certified Cloud Foundations"
+    }
+  },
+  {
+    "id": "mern-bootcamp",
+    "number": "03 /",
+    "badge": "EXCELLENCE AWARD",
+    "direction": "FULL-STACK SYSTEMS",
+    "title": "MERN Stack Intensive (Top 5 Performer)",
+    "quote": "“Awarded Top 5 Performer across 8 days of competitive full-stack development.”",
+    "description": "Recognized among the top 5 performers in an intensive full-stack bootcamp led by Anish S Nair. Engineered complete RESTful microservices, state machines with React, and optimized MongoDB aggregation pipelines.",
+    "skills": [
+      "MongoDB",
+      "Express.js",
+      "React",
+      "Node.js",
+      "REST APIs"
+    ],
+    "verificationUrl": "https://drive.google.com/file/d/1Y1xpZpjEfk1ZIdGWKMSzX6nPcwlHAqlj/view",
+    "terminal": {
+      "handle": "linkurcodes.mern.stack",
+      "issuer": "FISAT & Link Ur Codes",
+      "date": "July 2025",
+      "credentialId": "LUC-FISAT-MERN-TOP5",
+      "chip": "Top 5 Performer Distinction"
+    }
+  },
+  {
+    "id": "tcs-communication",
+    "number": "04 /",
+    "badge": "PROFESSIONAL MASTERY",
+    "direction": "EXECUTIVE RHETORIC",
+    "title": "Communication Skills — TCS iON",
+    "quote": "“Precision in technical rhetoric, executive presence, and multi-stakeholder clarity.”",
+    "description": "Rigorous certification covering interpersonal dynamics, workplace influence, technical presentation delivery, and conflict resolution across distributed cross-functional engineering teams.",
+    "skills": [
+      "Technical Storytelling",
+      "Executive Presence",
+      "Stakeholder Alignment"
+    ],
+    "verificationUrl": "https://drive.google.com/file/d/1XLoSuvwQ725z9x13asArSnrGMirq70Qv/view",
+    "terminal": {
+      "handle": "tcs.ion.communication",
+      "issuer": "Tata Consultancy Services (TCS iON)",
+      "date": "September 2025",
+      "credentialId": "TCS-ION-COMM-5921",
+      "chip": "Certified Technical Communicator"
+    }
+  },
+  {
+    "id": "mpower-program",
+    "number": "05 /",
+    "badge": "LEADERSHIP PROGRAM",
+    "direction": "STRATEGIC INFLUENCE",
+    "title": "mPower Soft Skills Training Program",
+    "quote": "“4-day immersive leadership rhetoric and high-impact verbal delivery.”",
+    "description": "Completed an intensive multi-day executive coaching program conducted by Vertical Eye at FISAT. Honed public speaking confidence, agile negotiation, and empathetic collaborative leadership.",
+    "skills": [
+      "Public Speaking",
+      "Persuasive Rhetoric",
+      "Team Leadership"
+    ],
+    "verificationUrl": "https://drive.google.com/file/d/1X8QbdGMUT-y_CvA2kaTJZKahGhvoxsqz/view",
+    "terminal": {
+      "handle": "mpower.verticaleye.leadership",
+      "issuer": "Vertical Eye & FISAT",
+      "date": "2025",
+      "credentialId": "MPOWER-FISAT-VE-2025",
+      "chip": "Executive Leadership Graduate"
+    }
+  }
+]

@@ -1,0 +1,63 @@
+{
+  "items": [
+    {
+      "id": "mca",
+      "degree": "Master of Computer Applications (MCA)",
+      "institution": "Federal Institute of Science and Technology (FISAT)",
+      "period": "2024 – 2026",
+      "grade": "CGPA: 6.83",
+      "field": "Computer Science & Advanced Software Engineering, Angamaly"
+    },
+    {
+      "id": "bcom",
+      "degree": "Bachelor of Commerce (B.Com)",
+      "institution": "Ma’din Arts and Science College, Calicut University",
+      "period": "2021 – 2024",
+      "grade": "CGPA: 6.3",
+      "field": "Commerce & Analytical Reasoning"
+    },
+    {
+      "id": "hss",
+      "degree": "Higher Secondary Education — Computer Science",
+      "institution": "Government Rajas Higher Secondary School, Kottakkal",
+      "period": "2019 – 2021",
+      "grade": "90.5%",
+      "field": "Computer Science, Mathematics & Physics"
+    },
+    {
+      "id": "sslc",
+      "degree": "Secondary School Leaving Certificate (SSLC)",
+      "institution": "Government Rajas Higher Secondary School, Kottakkal",
+      "period": "2019",
+      "grade": "91%",
+      "field": "General Academics"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "DevOps Fundamentals",
+      "issuer": "IBM SkillsBuild",
+      "date": "March 2026"
+    },
+    {
+      "title": "AWS Academy Cloud Foundations",
+      "issuer": "Amazon Web Services (AWS)",
+      "date": "August 2025"
+    },
+    {
+      "title": "MERN Stack Bootcamp (Top 5 Performer)",
+      "issuer": "FISAT & LinkUrCodes",
+      "date": "July 2025"
+    },
+    {
+      "title": "Communication Skills",
+      "issuer": "TCS iON",
+      "date": "September 2025"
+    },
+    {
+      "title": "MPOWER Soft Skills Training Program",
+      "issuer": "FISAT",
+      "date": "2025"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "netvision-analyzer",
+  "slug": "netvision-analyzer",
+  "systemIndex": "SYSTEM 04",
+  "title": "NetVision — Real-Time Network Analyzer",
+  "subtitle": "Cellular network coverage visualizer with base station tower mapping, signal quality heatmaps, and multi-carrier telemetry.",
+  "status": "↳ Shipped Utility System",
+  "year": "2023 - 2024",
+  "role": "Mobile & Backend Engineer",
+  "description": "A mobile network telemetry application helping users map cellular signals, locate nearby base stations, and identify carrier dead zones through interactive visual heatmaps and telemetry benchmarks.",
+  "detailedOverview": "Cellular signal strength fluctuates dramatically based on topology, urban canyon effects, and base station handovers. NetVision captures raw mobile radio telemetry directly from device hardware and correlates it with geospatial cellular tower registries. By querying localized base station coordinates from MongoDB spatial databases and computing signal gradients, NetVision renders intuitive coverage maps that illuminate coverage quality across 4G LTE and 5G spectrum bands.",
+  "technologies": [
+    "React Native (Expo)",
+    "Node.js",
+    "Express.js",
+    "MongoDB (2dsphere)",
+    "Geospatial Telemetry"
+  ],
+  "highlights": [
+    "Developed a mobile application for visualizing cellular network coverage, nearby tower locations, and signal quality across different areas.",
+    "Implemented interactive maps and color-coded coverage heatmaps to help users explore network availability and identify signal-strength variations.",
+    "Built backend REST APIs using Node.js and Express.js to retrieve tower data, coverage statistics, and network measurements.",
+    "Integrated MongoDB for data storage and structured the application into frontend, backend, service, and API modules.",
+    "Implemented location-based tower discovery, multi-provider coverage visualization, and network measurement history."
+  ],
+  "keyArchitecture": [
+    {
+      "title": "Geospatial 2dsphere Tower Indexing",
+      "description": "Leveraged MongoDB geospatial indexes to execute fast radius queries (`$nearSphere`) fetching base station coordinates, cellular frequency bands, and azimuth angles."
+    },
+    {
+      "title": "Hardware Telemetry Extraction",
+      "description": "Tapped into low-level mobile radio telephony APIs to stream live RSRP (Reference Signal Received Power), RSRQ, SINR, and CQI parameters without draining battery life."
+    },
+    {
+      "title": "Interpolated Coverage Heatmap Engine",
+      "description": "Calculated inverse distance weighting (IDW) algorithms to render smooth signal contour heatmaps overlaid directly on interactive mobile map layers."
+    },
+    {
+      "title": "Multi-Carrier Comparative Benchmarks",
+      "description": "Normalized metrics across diverse cellular network providers, offering side-by-side signal performance comparisons for traveling professionals."
+    }
+  ],
+  "metrics": "Interactive map rendering with 1,000+ localized cell towers; multi-provider cellular telemetry.",
+  "githubUrl": "https://github.com/razi-dev/NetVision",
+  "hoverImage": "/assets/images/projects/netvision-analyzer/hover-banner.jpg",
+  "gallery": [
+    {
+      "url": "/assets/images/projects/netvision-analyzer/hover-banner.jpg",
+      "caption": "Cellular Base Station Mapping, Real-Time RF Telemetry & Coverage Heatmaps"
+    }
+  ],
+  "iconName": "Network",
+  "featured": true
+}

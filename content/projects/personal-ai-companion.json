@@ -1,0 +1,55 @@
+{
+  "id": "personal-ai-companion",
+  "slug": "personal-ai-companion",
+  "systemIndex": "SYSTEM 03",
+  "title": "Personal AI Companion App",
+  "subtitle": "Context-aware mobile life coach synthesizing daily logs, habit metrics, and conversational memory using Groq ultra-high-speed inference.",
+  "status": "↳ Mobile App / Active Development",
+  "year": "2024",
+  "role": "Full-Stack Mobile Engineer",
+  "description": "A personal life guidance mobile client combining daily habit tracking, reflective journal logging, and instantaneous conversational guidance powered by Groq's high-speed inference engine and Supabase cloud synchronization.",
+  "detailedOverview": "Traditional habit trackers provide static charts without actionable intelligence, while standalone chatbots lack persistent personal context. Personal AI Companion bridges this gap into a unified mobile client. As users log daily routines, moods, and reflective journal entries, the local state engine compiles a rolling behavioral context vector. When the user interacts with the AI mentor, the prompt pipeline merges real-time habit telemetry with conversation memory, delivering deeply personalized guidance within fractions of a second.",
+  "technologies": [
+    "React Native (Expo)",
+    "TypeScript",
+    "Supabase",
+    "Groq API (LPU Inference)",
+    "AsyncStorage",
+    "TailwindCSS"
+  ],
+  "highlights": [
+    "Developed an AI-powered personal life coach that uses daily logs, habit tracking, journal entries, and chat history to generate context-aware guidance.",
+    "Integrated the Groq API for conversational AI and Supabase for authentication, cloud synchronization, and backend data management.",
+    "Implemented habit tracking with streaks, completion statistics, behavioral insights, and weekly reviews to help users monitor personal progress.",
+    "Designed a modular application architecture with reusable components, service modules, and persistent local storage using AsyncStorage."
+  ],
+  "keyArchitecture": [
+    {
+      "title": "Ultra-Low Latency Inference with Groq LPU",
+      "description": "Leveraged Groq's Language Processing Units (LPU) to stream conversational tokens at 500+ tokens/second, dropping first-chunk latency below 400ms on mobile devices."
+    },
+    {
+      "title": "Dual-Tier Storage with Optimistic Local UI",
+      "description": "Implemented local-first persistence via AsyncStorage ensuring instant interaction without network lag, synchronized seamlessly in the background with Supabase PostgreSQL tables."
+    },
+    {
+      "title": "Habit Streak Engine & Context Synthesis",
+      "description": "Engineered mathematical streak recalculation, completion decay algorithms, and adaptive reflective prompt scheduling based on user engagement patterns."
+    },
+    {
+      "title": "Decoupled Service Architecture",
+      "description": "Clean separation of concerns isolating UI components from auth providers, offline cache managers, and conversational API connectors."
+    }
+  ],
+  "metrics": "Sub-400ms token streaming latency via Groq LPU; 100% offline-ready journal logging with automatic cloud sync.",
+  "githubUrl": "https://github.com/razi-dev/ai-companion-app",
+  "hoverImage": "/assets/images/projects/personal-ai-companion/hover-banner.jpg",
+  "gallery": [
+    {
+      "url": "/assets/images/projects/personal-ai-companion/hover-banner.jpg",
+      "caption": "Habit Streak Analytics, Reflective Journaling & Real-Time AI Conversational UI"
+    }
+  ],
+  "iconName": "Sparkles",
+  "featured": true
+}

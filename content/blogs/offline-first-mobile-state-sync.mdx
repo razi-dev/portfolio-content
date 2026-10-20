@@ -1,0 +1,36 @@
+---
+id: "offline-first-state-sync"
+title: "Offline-First Mobile Architecture: Local Cache & Optimistic State Sync"
+slug: "offline-first-mobile-state-sync"
+date: "March 2025"
+readTime: "5 min read"
+summary: "Designing zero-latency mobile applications with local-first AsyncStorage mutations, conflict-free background synchronizations, and Supabase PostgreSQL replication."
+tags: ["React Native","Supabase","Offline-First","State Sync"]
+headings: [{"id":"the-myth-of-instant-cloud","text":"The Fallacy of Constant Connectivity","level":2},{"id":"optimistic-local-ui","text":"Optimistic Local-First UI Mutations","level":2},{"id":"offline-mutation-queue","text":"Serialized Mutation Queues & Retry Policies","level":3},{"id":"conflict-resolution-strategies","text":"Conflict Resolution & Last-Write-Wins","level":2},{"id":"supabase-realtime-replication","text":"Supabase Realtime PostgreSQL Replication","level":2}]
+sections: [{"id":"the-myth-of-instant-cloud","title":"The Fallacy of Constant Connectivity","level":2,"content":"Every mobile app built with the assumption of reliable, low-latency cloud internet will inevitably feel sluggish or broken to users in transit, elevators, or rural dead zones. When a user creates a habit log or writes a personal reflective thought, waiting for a remote round-trip HTTP handshake before updating the screen ruins perceived performance. In our companion app architecture, every write mutation is local-first by definition."},{"id":"optimistic-local-ui","title":"Optimistic Local-First UI Mutations","level":2,"content":"The UI thread modifies an in-memory state store and persists directly to unencrypted local storage in under 4ms. The user sees immediate feedback with smooth animations. Concurrently, a background synchronization worker queues an idempotent mutation envelope for upstream dispatch."},{"id":"offline-mutation-queue","title":"Serialized Mutation Queues & Retry Policies","level":3,"content":"Mutations are stored in a persistent FIFO queue with exponential backoff and jitter. If network requests fail or return 5xx errors, the queue retains the transaction without blocking further user inputs."},{"id":"conflict-resolution-strategies","title":"Conflict Resolution & Last-Write-Wins","level":2,"content":"For distributed habit streaks and journal revisions, we stamp records with client UTC timestamps and vector clocks. When online re-synchronization occurs, conflicts are resolved deterministically using field-level CRDT (Conflict-free Replicated Data Type) rules."},{"id":"supabase-realtime-replication","title":"Supabase Realtime PostgreSQL Replication","level":2,"content":"Using Supabase Realtime channels listening on PostgreSQL Write-Ahead Logs (WAL), changes committed on other user devices instantly stream down to synchronize the local state store with zero polling overhead."}]
+---
+
+# Offline-First Mobile Architecture: Local Cache & Optimistic State Sync
+
+Designing zero-latency mobile applications with local-first AsyncStorage mutations, conflict-free background synchronizations, and Supabase PostgreSQL replication.
+
+## The Fallacy of Constant Connectivity
+
+Every mobile app built with the assumption of reliable, low-latency cloud internet will inevitably feel sluggish or broken to users in transit, elevators, or rural dead zones. When a user creates a habit log or writes a personal reflective thought, waiting for a remote round-trip HTTP handshake before updating the screen ruins perceived performance. In our companion app architecture, every write mutation is local-first by definition.
+
+## Optimistic Local-First UI Mutations
+
+The UI thread modifies an in-memory state store and persists directly to unencrypted local storage in under 4ms. The user sees immediate feedback with smooth animations. Concurrently, a background synchronization worker queues an idempotent mutation envelope for upstream dispatch.
+
+## Serialized Mutation Queues & Retry Policies
+
+Mutations are stored in a persistent FIFO queue with exponential backoff and jitter. If network requests fail or return 5xx errors, the queue retains the transaction without blocking further user inputs.
+
+## Conflict Resolution & Last-Write-Wins
+
+For distributed habit streaks and journal revisions, we stamp records with client UTC timestamps and vector clocks. When online re-synchronization occurs, conflicts are resolved deterministically using field-level CRDT (Conflict-free Replicated Data Type) rules.
+
+## Supabase Realtime PostgreSQL Replication
+
+Using Supabase Realtime channels listening on PostgreSQL Write-Ahead Logs (WAL), changes committed on other user devices instantly stream down to synchronize the local state store with zero polling overhead.
+

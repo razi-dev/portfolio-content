@@ -1,0 +1,31 @@
+[
+  {
+    "id": "webgeon-results",
+    "company": "Webgeon Results Private Limited",
+    "role": "Mobile Application Developer Intern",
+    "period": "2026 – Present",
+    "location": "India",
+    "summary": "Spearheading mobile application development across high-volume e-commerce and enterprise HRMS ecosystems, integrating native modules, real-time push services, and resilient state synchronization.",
+    "productsShipped": [
+      "Panchalivastra (E-Commerce Mobile Application / React Native & Expo)",
+      "Rantaa (E-Commerce Mobile Application / React Native & Expo)",
+      "Elitecraft HRMS (Enterprise Human Resource Management System)",
+      "Atmos HRMS (Enterprise Human Resource Management System)",
+      "2+ Additional Client E-Commerce Applications"
+    ],
+    "responsibilities": [
+      "Developed Panchalivastra and Rantaa mobile applications and contributed to 2+ additional e-commerce applications using React Native and Expo.",
+      "Contributed to 2+ HRMS applications, including Elitecraft HRMS and Atmos HRMS, implementing mobile features and application functionality.",
+      "Integrated REST APIs, authentication mechanisms, and backend services to enable secure access and reliable data exchange.",
+      "Implemented push notifications, loading states, animations, and interactive UI features to improve application functionality and user experience.",
+      "Debugged, tested, and troubleshot application issues, implementing fixes based on functional requirements.",
+      "Used Git and GitHub for version control and collaborated with web development and DevOps teams on integration, testing, and deployment.",
+      "Took ownership of assigned mobile development tasks and implemented features to support project delivery."
+    ],
+    "award": {
+      "title": "Phoenix Rising Award",
+      "year": "2026",
+      "description": "Recognized during the Mobile Application Developer Internship for taking ownership of mobile app development and demonstrating proactive execution."
+    }
+  }
+]

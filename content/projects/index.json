@@ -1,0 +1,34 @@
+[
+  {
+    "id": "truetalkie",
+    "slug": "truetalkie",
+    "title": "TrueTalkie — Tactical Offline Mesh & Cloud Walkie-Talkie",
+    "systemIndex": "SYSTEM 01",
+    "featured": true,
+    "file": "projects/truetalkie.json"
+  },
+  {
+    "id": "enterprise-rag-agent",
+    "slug": "enterprise-rag-agent",
+    "title": "Enterprise AI Agent Platform",
+    "systemIndex": "SYSTEM 02",
+    "featured": true,
+    "file": "projects/enterprise-rag-agent.json"
+  },
+  {
+    "id": "personal-ai-companion",
+    "slug": "personal-ai-companion",
+    "title": "Personal AI Companion App",
+    "systemIndex": "SYSTEM 03",
+    "featured": true,
+    "file": "projects/personal-ai-companion.json"
+  },
+  {
+    "id": "netvision-analyzer",
+    "slug": "netvision-analyzer",
+    "title": "NetVision — Real-Time Network Analyzer",
+    "systemIndex": "SYSTEM 04",
+    "featured": true,
+    "file": "projects/netvision-analyzer.json"
+  }
+]
