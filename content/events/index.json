@@ -1,0 +1,34 @@
+[
+  {
+    "id": "mca-graduation",
+    "slug": "mca-graduation-fisat",
+    "title": "Master of Computer Applications (MCA) Graduation",
+    "date": "July 14, 2026",
+    "tag": "ACADEMIC & DEGREE",
+    "file": "events/mca-graduation.json"
+  },
+  {
+    "id": "ai-prompt-engineering",
+    "slug": "ai-prompt-engineering-vibe-coding-workshop",
+    "title": "AI Prompt Engineering & Vibe Coding Workshop",
+    "date": "May 22, 2026",
+    "tag": "WORKSHOP & AI",
+    "file": "events/ai-prompt-engineering.json"
+  },
+  {
+    "id": "mpower-communication",
+    "slug": "mpower-training-workshop-power-communication",
+    "title": "mPower Workshop on Power Communication",
+    "date": "September 04, 2025",
+    "tag": "LEADERSHIP & SKILLS",
+    "file": "events/mpower-communication.json"
+  },
+  {
+    "id": "mern-stack-bootcamp",
+    "slug": "8-day-mern-stack-bootcamp",
+    "title": "8-Day Intensive MERN Stack Bootcamp",
+    "date": "July 28, 2025",
+    "tag": "BOOTCAMP & FULL-STACK",
+    "file": "events/mern-stack-bootcamp.json"
+  }
+]
