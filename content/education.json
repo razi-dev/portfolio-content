@@ -1,6 +1,14 @@
 {
   "items": [
     {
+      "id": "edu-1795075193887",
+      "degree": "ZZ TEST DEGREE DELETE ME",
+      "institution": "University / College",
+      "period": "2024 – 2026",
+      "score": "CGPA: 8.5/10",
+      "field": "Computer Science"
+    },
+    {
       "id": "mca",
       "degree": "Master of Computer Applications (MCA)",
       "institution": "Federal Institute of Science and Technology (FISAT)",
