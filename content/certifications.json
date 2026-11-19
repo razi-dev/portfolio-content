@@ -1,5 +1,26 @@
 [
   {
+    "id": "cert-1795074979755",
+    "number": "06 /",
+    "badge": "VERIFIED CREDENTIAL",
+    "direction": "ENGINEERING",
+    "title": "ZZ TEST CERT DELETE ME",
+    "quote": "“Continuous learning and mastery.”",
+    "description": "Description of the credential and acquired competencies.",
+    "skills": [
+      "Cloud",
+      "Architecture"
+    ],
+    "verificationUrl": "https://...",
+    "terminal": {
+      "handle": "cert.verified",
+      "issuer": "Issuer Name",
+      "date": "November 2026",
+      "credentialId": "CERT-ID",
+      "chip": "Verified"
+    }
+  },
+  {
     "id": "ibm-devops",
     "number": "01 /",
     "badge": "VERIFIED CREDENTIAL",
