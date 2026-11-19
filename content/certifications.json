@@ -6,15 +6,15 @@
     "direction": "ENGINEERING",
     "title": "ZZ TEST CERT DELETE ME",
     "quote": "“Continuous learning and mastery.”",
-    "description": "Description of the credential and acquired competencies.",
+    "description": "Test description body.",
     "skills": [
       "Cloud",
       "Architecture"
     ],
-    "verificationUrl": "https://...",
+    "verificationUrl": "https://example.com/verify",
     "terminal": {
       "handle": "cert.verified",
-      "issuer": "Issuer Name",
+      "issuer": "Test Issuer Org",
       "date": "November 2026",
       "credentialId": "CERT-ID",
       "chip": "Verified"
