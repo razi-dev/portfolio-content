@@ -1,21 +1,5 @@
 [
   {
-    "id": "exp-1795075122540",
-    "company": "Company Name",
-    "role": "ZZ TEST ROLE DELETE ME",
-    "period": "2025 – Present",
-    "location": "Kochi, Kerala, India",
-    "summary": "Overview of responsibilities and technical ownership.",
-    "productsShipped": [
-      "Feature 1",
-      "System 2"
-    ],
-    "responsibilities": [
-      "Core Architecture",
-      "API Engineering"
-    ]
-  },
-  {
     "id": "webgeon-results",
     "company": "Webgeon Results Private Limited",
     "role": "Mobile Application Developer Intern",
